@@ -1,11 +1,10 @@
+import React from "react";
 import Head from "next/head";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import IconsaxBold2 from "@/components/Icon/IconsaxBoldComplete";
 import Iconsax2 from "@/components/Icon/IconsaxComplete";
-import { iconsBold2 } from "@/data/bold";
 import { icons2 } from "@/data/linear";
-
-import React from "react";
+import { iconsBold2 } from "@/data/bold";
 
 export default function iconsax() {
   let iconNames2 = Object.keys(icons2);
@@ -16,7 +15,7 @@ export default function iconsax() {
         <title>Iconsax Library</title>
       </Head>
       <TabGroup>
-        <TabList className='flex gap-4'>
+        <TabList className='w-screen fixed top-0 left-0 right-0 shadow-md py-3 px-6 flex gap-4 bg-white'>
           <Tab
             key={"linear"}
             className='rounded-full px-3 py-1 text-sm/6 font-semibold text-gray-900 focus:not-data-focus:outline-none data-focus:outline data-focus:outline-gray-900 data-hover:bg-gray-100 data-selected:bg-gray-200 data-selected:data-hover:bg-gray-200'
