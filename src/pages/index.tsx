@@ -1,10 +1,9 @@
-import IconsaxBold2, {
-  iconsBold2,
-} from "@/components/Icon/IconsaxBoldComplete";
-import Iconsax2 from "@/components/Icon/IconsaxComplete";
-import { icons2 } from "@/data/linear";
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import Head from "next/head";
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import IconsaxBold2 from "@/components/Icon/IconsaxBoldComplete";
+import Iconsax2 from "@/components/Icon/IconsaxComplete";
+import { iconsBold2 } from "@/data/bold";
+import { icons2 } from "@/data/linear";
 
 import React from "react";
 
