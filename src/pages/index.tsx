@@ -1,8 +1,10 @@
 import IconsaxBold2, {
   iconsBold2,
 } from "@/components/Icon/IconsaxBoldComplete";
-import Iconsax2, { icons2 } from "@/components/Icon/IconsaxComplete";
+import Iconsax2 from "@/components/Icon/IconsaxComplete";
+import { icons2 } from "@/data/linear";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import Head from "next/head";
 
 import React from "react";
 
@@ -11,6 +13,9 @@ export default function iconsax() {
   let iconNamesBold2 = Object.keys(iconsBold2);
   return (
     <div className='bg-n-0 w-full h-full'>
+      <Head>
+        <title>Iconsax Library</title>
+      </Head>
       <TabGroup>
         <TabList className='flex gap-4'>
           <Tab
