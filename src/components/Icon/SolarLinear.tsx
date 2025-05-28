@@ -1,5 +1,7 @@
 import React from "react";
-
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { twMerge } from "tailwind-merge";
+const CopyComponent = CopyToClipboard as any;
 // Icon paths type definition
 type iconKeys =
   | "electronicdevices-airbudscharge"
@@ -6054,7 +6056,7 @@ const SolarOutline: React.FC<SolarOutlineProps> = ({
       width={size}
       height={size}
       viewBox='0 0 24 24'
-      className={className}
+      className={twMerge(className)}
       style={style}
       fill='currentColor'
       stroke='none'
@@ -6062,7 +6064,15 @@ const SolarOutline: React.FC<SolarOutlineProps> = ({
       xmlns='http://www.w3.org/2000/svg'
     >
       {iconPaths.map((path, index) => (
-        <path key={index} d={path} fill-rule='evenodd' clip-rule='evenodd' />
+        <CopyComponent
+          key={index}
+          text={JSON.stringify(solaroutline[name])}
+          onCopy={() => {
+            alert("copied!");
+          }}
+        >
+          <path key={index} d={path} fill-rule='evenodd' clip-rule='evenodd' />
+        </CopyComponent>
       ))}
     </svg>
   );
