@@ -6066,7 +6066,7 @@ const SolarOutline: React.FC<SolarOutlineProps> = ({
       {iconPaths.map((path, index) => (
         <CopyComponent
           key={index}
-          text={JSON.stringify(solaroutline[name])}
+          text={`"${name}" : ${JSON.stringify(solaroutline[name])}`}
           onCopy={() => {
             alert("copied!");
           }}

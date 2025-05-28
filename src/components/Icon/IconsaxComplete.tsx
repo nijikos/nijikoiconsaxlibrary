@@ -64,7 +64,7 @@ const Iconsax2 = ({
       return (
         <CopyComponent
           key={index}
-          text={JSON.stringify(icons2[name])}
+          text={`"${name}" : ${JSON.stringify(icons2[name])}`}
           onCopy={() => {
             alert("copied!");
           }}
